@@ -130,7 +130,7 @@ Mario.MapState.prototype.NextWorld = function() {
 
     //The player has won, wait for CheckForChange to get called
     if (this.WorldNumber === 8) {
-        return;
+        // return;
     }
 
     this.MoveTime = 0;
@@ -469,7 +469,7 @@ Mario.MapState.prototype.Update = function(delta) {
     var x = 0, y = 0, difficulty = 0, type = 0;
 
     if (this.WorldNumber === 8) {
-        return;
+        // return;
     }
 
     this.XMario += this.XMarioA;
@@ -591,7 +591,7 @@ Mario.MapState.prototype.Draw = function(context) {
     var x = 0, y = 0;
 
     if (this.WorldNumber === 8) {
-        return;
+        // return;
     }
 
     context.drawImage(this.MapImage, 0, 0);
@@ -655,7 +655,7 @@ Mario.MapState.prototype.GetY = function() {
 
 Mario.MapState.prototype.CheckForChange = function(context) {
     if (this.WorldNumber === 8) {
-        context.ChangeState(new Mario.WinState());
+        // context.ChangeState(new Mario.WinState());
     }
     if (this.EnterLevel) {
         context.ChangeState(new Mario.LevelState(this.LevelDifficulty, this.LevelType));
