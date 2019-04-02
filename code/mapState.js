@@ -384,7 +384,7 @@ Mario.MapState.prototype.RenderStatic = function() {
     for (x = 0; x < 20; x++) {
         //240 / 16 = 15
         for (y = 0; y < 15; y++) {
-            this.MapContext.drawImage(image, ((this.WorldNumber / 4) | 0) * 16, 0, 16, 16, x * 16, y * 16, 16, 16);
+            this.MapContext.drawImage(image, ((this.WorldNumber > 3) | 0) * 16, 0, 16, 16, x * 16, y * 16, 16, 16);
 
             if (this.Level[x][y] === Mario.MapTile.Level) {
                 type = this.Data[x][y];
